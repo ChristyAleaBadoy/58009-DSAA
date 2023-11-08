@@ -1,0 +1,106 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNSJXDPaFD/8XkL0YW8gojI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ChristyAleaBadoy/58009-DSAA/blob/main/labactG7\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def Polygon(name):\n",
+        "    if name == \"Triangle\" or name == \"triangle\" or name == \"TRIANGLE\":\n",
+        "        return 3\n",
+        "    elif name == \"Square\" or name == \"square\" or name == \"SQUARE\" or name == \"Rectangle\" or name == \"rectangle\" or name == \"RECTANGLE\":\n",
+        "        return 4\n",
+        "\n",
+        "name = input(\"Name of polygon: \")\n",
+        "\n",
+        "try:\n",
+        "    name = str(name)\n",
+        "    if name not in [\"Triangle\",\"triangle\",\"TRIANGLE\",\"Square\",\"square\",\"SQUARE\",\"Rectangle\",\"rectangle\",\"RECTANGLE\"]:\n",
+        "        print(\"Polygon name not included.\")\n",
+        "    else:\n",
+        "        side = Polygon(name)\n",
+        "        print(name + \" is a polygon which has \" + str(side) + \" sides.\")\n",
+        "except:\n",
+        "    print(\"Invalid input. Please enter a valid polygon name.\")\n",
+        "\n",
+        "class Triangle:\n",
+        "  def area(self):\n",
+        "      a = float(input('Enter first side: '))\n",
+        "      b = float(input('Enter second side: '))\n",
+        "      c = float(input('Enter third side: '))\n",
+        "\n",
+        "  def calculate_area(self):\n",
+        "      area = (s*(s-a)*(s-b)*(s-c)) ** 0.5\n",
+        "print(\"The area of the triangle is:\",area,\"square units.\")\n",
+        "\n",
+        "class Square:\n",
+        "  def area(self):\n",
+        "      a = float(input('Enter first side: '))\n",
+        "      b = float(input('Enter second side: '))\n",
+        "      c = float(input('Enter third side: '))\n",
+        "      d = float(input('Enter fourth side: '))\n",
+        "\n",
+        "  def calculate_area(self):\n",
+        "      area = side*side\n",
+        "print(\"Area of the square is: \",area,\"square units.\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "class Rectangle:\n",
+        "  def area(self):\n",
+        "     l = float(input('Enter the length of a Rectangle: '))\n",
+        "     w = float(input('Enter the width of a Rectangle: '))\n",
+        "\n",
+        "\n",
+        "  def calculate_area(self):\n",
+        "    area = l * w\n",
+        "print(\"Area of the rectangle is: \",area,\"square units.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2gCqPVdSJX7M",
+        "outputId": "5e43a3af-6959-467f-b1c4-13dde5679799"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Name of polygon: triangle\n",
+            "triangle is a polygon which has 3 sides.\n",
+            "The area of the triangle is: 3.897114317029974 square units.\n",
+            "Area of the square is:  3.897114317029974 square units.\n",
+            "Area of the rectangle is:  3.897114317029974 square units.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
